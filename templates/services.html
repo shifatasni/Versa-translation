@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock%}
+{% block content %}
+<div class="services-wrapper">
+  <h1 class="main-title">Our Services</h1>
+  <div class="line-big"></div>
+  <div class="line-small"></div>
+
+  <p class="subtitle">
+    We provide accurate, reliable, and culturally adapted translation services
+    to help you connect with a global audience.
+  </p>
+
+  <div class="card-grid">
+
+    <div class="card-box">
+      <div class="icon-circle">
+        <i class="fa-solid fa-headset"  id="fa-solid"></i>
+      </div>
+      <h3>Audio Translation</h3>
+      <p>We convert spoken content from one language to another with high accuracy and natural tone.</p>
+    </div>
+
+    <div class="card-box">
+      <div class="icon-circle">
+        <i class="fa-regular fa-file-lines" id="fa-regular"></i>
+      </div>
+      <h3>Document Translation</h3>
+      <p>Professional translation of documents while maintaining meaning, format, and clarity.</p>
+    </div>
+
+    <div class="card-box">
+      <div class="icon-circle">
+        <i class="fa-solid fa-video" id="fa-solid"></i>
+      </div>
+      <h3>Video Translation</h3>
+      <p>Translate videos with subtitles or voice-over to reach a global audience effectively.</p>
+    </div>
+
+    <div class="card-box">
+      <div class="icon-circle">
+        <i class="fa-solid fa-laptop"  id="fa-solid"></i>
+      </div>
+      <h3>Website Localization</h3>
+      <p>Adapt your website content to different languages and cultures for better user experience.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="column">
+            <h6>Quick Links</h6>
+            <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'services' %}"><i class="fas fa-briefcase"></i> Services</a>
+            <a href="{% url 'languages' %}"><i class="fas fa-language"></i> Languages</a>
+            <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="column">
+            <h6>Contact Us</h6>
+            <a href="tel:+918590292015"><i class="fas fa-phone"></i> +91 8590292015</a>
+            <p><i class="fas fa-envelope"></i> info@versa.com</p>
+            <p><i class="fas fa-location-dot"></i> Kerala, India</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="column">
+            <h6>Follow Us</h6>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/918590292015" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+
+    </div>
+
+    <p class="bottom">
+        © 2026 Versa Translation Services. All Rights Reserved.
+    </p>
+
+</footer>
+{% endblock %}

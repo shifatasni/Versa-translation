@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock%}
+{% block content %}
+
+<div  class= "body" >
+</div>
+<div class="home">
+    <h1 class="main-head">Professional Translation Services<br>
+       You Can Trust
+    </h1>
+    <div class="line"></div>
+    <h3 class="fast">fast & Accurate Translation in Your Languages</h3>
+    <button class="btn-quote" onclick="openForm()">Get a Free Quote</button>
+
+<div id="quoteForm" class="form-popup">
+  <form class="form-container" onsubmit="sendToWhatsApp(event)">
+    <h2>Get a Quote</h2>
+
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
+    <textarea id="message" placeholder="Your Message"></textarea>
+
+    <button type="submit" class="btn-submit">Submit</button>
+    <button type="button" class="btn-close2" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    
+    <button class="btn-Whatsapp"  onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
+</div>
+
+
+
+<div class="service">
+    <h1 class="our-serv">Our Services</h1>
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="serv-div">
+      <i class="fa-solid fa-headset fa-2xl" ></i>
+      <h3 class="audio">Audio<br>Translation</h3>
+      <div class="line3"></div>
+      <i class="fa-regular fa-file-lines fa-2xl"></i>
+      <h3 class="document">Document<br> Translation</h3>
+      <div class="line4"></div>
+      <i class="fa-solid fa-video fa-2xl" id="video-icon"></i>
+      <h3 class="video">Video<br> Translation</h3>
+      <div class="line5"></div>
+      <i class="fa-solid fa-laptop fa-2xl" id="lap-icon"></i>
+      <h3 class="website">Website Localization</h3>
+    </div>
+</div>
+
+
+<div class="language">
+        <h2 class="lang-head"><span id="first-letter">L</span >anguages <span id="first-letter" >W</span>e <span id="first-letter">T</span>ranslate</h2>
+        <div class="lang-div-main">
+            <div class="lang-div1"><h5 class="h5">English - Arabic</h5></div>
+            <div class="lang-div2"><h5 class="h5">English - Hindi</h5></div>
+            <div class="lang-div3"><h5 class="h5">English - Urdu</h5></div>
+            <div class="lang-div4"><h5 class="h5">Arabic - English</h5></div>
+            <div class="lang-div5"><h5 class="h5">Arabic - Hindi</h5></div>
+            <div class="lang-div6"><h5 class="h5">Arabic - Urdu</h5></div>
+        </div>
+      
+</div>
+
+<div class="choose">
+    <h2 class="choose-head">Why Choose <span id="versa">Versa</span>?</h2>
+     <img class="quality" src="{% static 'images/quality.png' %}">
+    <h4 class="cert-trans">Certified Translators</h4>
+    <img class="consistency" src="{% static 'images/consistency.png' %}">
+    <h4 class="fast-rel">Fast & Reliable</h4>
+    <img class="security" src="{% static 'images/security.png' %}">
+    <h4 class="conf-sec">Confidential & Secure</h4>
+    <img class="discount" src="{% static 'images/discount.png' %}">
+    <h4 class="aff-rate">Affordable Rates</h4>
+</div>
+
+<div class="works">
+   <h2 class="works-head"> How It Works</h2>
+    <div class="line6"></div>
+    <div class="upload-doc">
+        <img class="upload" src="{% static 'images/upload.png' %}">
+        <h5 class="upload-head"><span  id="span123">1.</span> Upload Your Document</h5>
+        <h7 class="upl-des">Upload your document to get<br>
+             a fast and accurate translation.<br>
+              Supported formats include PDF, <br>
+              Word, and text files.</h7>
+    </div>
+    <div class="get-a-quote">
+        <img class="payment" src="{% static 'images/payment.png' %}">
+        <h5 class="get-head"><span id="span123">2.</span> Get A Quote</h5>
+        <ul class="get-ul">
+            <li>Upload your document</li>
+            <li>Tell us the language pair</li>
+            <li>We calculate the price and<br> send it to you</li>
+        </ul>
+    </div>
+    <div class="receive-div">
+        <img class="translator" src="{% static 'images/translator.png' %}">
+        <h5 class="receive-head"><span  id="span123">3.</span> Receive Your Translation</h5>
+        <h7 class="rec-des">Receive your completed<br> translation
+             with high accuracy,  <br>
+             preserved formatting, and on-time <br>delivery.</h7>
+    </div>
+    <!-- From Uiverse.io by Allyhere --> 
+    <button id="quoteBtn">Get a Free Quote</button>
+    <!-- Popup Form -->
+    <div id="popup" class="popup">
+       <div class="popup-content">
+        <span id="closeBtn">&times;</span>
+    
+          <h2>Free Translation Quote</h2>
+
+       <form id="quoteForm">
+          <input type="text" placeholder="Your Name" required>
+      
+          <input type="email" placeholder="Your Email" required>
+      
+          <select required>
+            <option value="">Source Language</option>
+            <option>English</option>
+            <option>Malayalam</option>
+            <option>Hindi</option>
+          </select>
+
+          <select required>
+           <option value="">Target Language</option>
+           <option>English</option>
+           <option>Malayalam</option>
+           <option>Hindi</option>
+         </select>
+
+          <textarea placeholder="Enter text or details..." required></textarea>
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </div>
+        <div class="line-big"></div>
+    
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="column">
+            <h6>Quick Links</h6>
+            <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'services' %}"><i class="fas fa-briefcase"></i> Services</a>
+            <a href="{% url 'languages' %}"><i class="fas fa-language"></i> Languages</a>
+            <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="column">
+            <h6>Contact Us</h6>
+            <a href="tel:+918590292015"><i class="fas fa-phone"></i> +91 8590292015</a>
+            <p><i class="fas fa-envelope"></i> info@versa.com</p>
+            <p><i class="fas fa-location-dot"></i> Kerala, India</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="column">
+            <h6>Follow Us</h6>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/918590292015" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+
+    </div>
+
+    <p class="bottom">
+        © 2026 Versa Translation Services. All Rights Reserved.
+    </p>
+
+</footer>
+
+<button onclick="goTop()" id="topBtn"><i class="fa-solid fa-circle-chevron-up fa-xl"></i></button>
+
+
+
+
+{% endblock %}

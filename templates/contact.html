@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock%}
+{% block content %}
+
+<div class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- Left Info -->
+        <div class="contact-info">
+            <h2>🌍 Get in Touch</h2>
+            <p>Professional translation services across multiple languages. Fast, accurate, and reliable.</p>
+
+            <div class="info-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Kerala, India</span>
+            </div>
+
+            <div class="info-item">
+                <i class="bi bi-envelope"></i>
+                <span>support@translationpro.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="bi bi-phone"></i>
+                <span>+91 8590292015</span>
+            </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="contact-form">
+    <h2>Contact Us</h2>
+
+    <form id="whatsappForm">
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="language" placeholder="Language Pair (Eg: English to Arabic)">
+        </div>
+
+        <div class="input-group">
+            <textarea id="message" placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="submit">Send Message 🚀</button>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

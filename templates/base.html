@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+    <script src="{% static 'script.js' %}" defer></script>
+  </head>
+   
+<body >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
+      <div class="container-fluid">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="nav">
+       <img class="brand" src="{% static 'images/versa.png' %}">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+  <a class="nav-link " href="{% url 'home' %}"  >
+    Home
+  </a>
+</li>
+      <li class="nav-item" >
+          <a class="nav-link nav-link " href="{% url 'services' %}" >Services</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'languages' %}">Languages</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+ 
+</html>
