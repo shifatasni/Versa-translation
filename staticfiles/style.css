@@ -1,11 +1,14 @@
 
 .container-fluid{
-    
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+    width:100%;
     position: fixed;
-  
     top:30px;
     font-family:'josefin sans', sans-serif;
-    width: 1255px;
     box-sizing: border-box;
     z-index: 1000;
   
@@ -62,12 +65,17 @@ color: rgb(15, 64, 120);
 }
 
 .body{
-margin:0;
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
- url("/static/images/translate.jpg");
-background-size:cover;
-height:571px;
-width:1255px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+  width:100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+   url("/static/images/translate.jpg");
+  background-size:cover;
+  height:571px;
+  
 
 }
 
