@@ -1168,7 +1168,8 @@ color: rgb(15, 64, 120);
 
 
 .lang-section-new {
-  padding: 100px 20px;
+ 
+ padding: 100px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #e0ecff, #f7f9fc);
@@ -1463,4 +1464,40 @@ color: rgb(15, 64, 120);
   border: none;
 }
 
+@media (max-width: 768px) {
 
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .main-head {
+    position: static;
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .line {
+    position: static;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .fast {
+    position: static;
+    font-size: 14px;
+  }
+
+  .btn-quote,
+  .btn-Whatsapp {
+    position: static;
+    width: 90%;
+    max-width: 250px;
+    margin: 10px auto;
+  }
+
+}
