@@ -145,3 +145,10 @@ function sendToWhatsApp(event) {
 
   window.open(url, "_blank");
 }
+
+
+
+
+function toggleMenu() {
+  document.querySelector(".navbar-nav").classList.toggle("active");
+}
