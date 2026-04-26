@@ -2,10 +2,10 @@
 {% load static %}
 {% block title %}home{% endblock%}
 {% block content %}
-
-<div  class= "body" >
-</div>
-<div class="home">
+<div  class="page">
+<section  class= "body" >
+</section>
+<section class="home">
     <h1 class="main-head">Professional Translation Services<br>
        You Can Trust
     </h1>
@@ -27,11 +27,11 @@
 </div>
     
     <button class="btn-Whatsapp"  onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
-</div>
+</section>
 
 
 
-<div class="service">
+<section class="service">
     <h1 class="our-serv">Our Services</h1>
     <div class="line1"></div>
     <div class="line2"></div>
@@ -48,10 +48,10 @@
       <i class="fa-solid fa-laptop fa-2xl" id="lap-icon"></i>
       <h3 class="website">Website Localization</h3>
     </div>
-</div>
+</section>
 
 
-<div class="language">
+<section class="language">
         <h2 class="lang-head"><span id="first-letter">L</span >anguages <span id="first-letter" >W</span>e <span id="first-letter">T</span>ranslate</h2>
         <div class="lang-div-main">
             <div class="lang-div1"><h5 class="h5">English - Arabic</h5></div>
@@ -62,9 +62,9 @@
             <div class="lang-div6"><h5 class="h5">Arabic - Urdu</h5></div>
         </div>
       
-</div>
+</section>
 
-<div class="choose">
+<section class="choose">
     <h2 class="choose-head">Why Choose <span id="versa">Versa</span>?</h2>
      <img class="quality" src="{% static 'images/quality.png' %}">
     <h4 class="cert-trans">Certified Translators</h4>
@@ -74,9 +74,9 @@
     <h4 class="conf-sec">Confidential & Secure</h4>
     <img class="discount" src="{% static 'images/discount.png' %}">
     <h4 class="aff-rate">Affordable Rates</h4>
-</div>
+</section>
 
-<div class="works">
+<section class="works">
    <h2 class="works-head"> How It Works</h2>
     <div class="line6"></div>
     <div class="upload-doc">
@@ -139,8 +139,10 @@
     </div>
         <div class="line-big"></div>
     
-</div>
+</section>
 
+
+</div>
 
 <footer class="footer">
 
