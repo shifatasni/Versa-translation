@@ -93,21 +93,20 @@
 .body{
   display: flex;
   flex-wrap: wrap;
-  max-width: 1255px;
   margin: auto;
   gap: 20px;
-  width:100%;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   url("/static/images/translate.jpg");
   background-size:cover;
   background-position: center;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh; 
 
+
 }
 
-@media (max-width: 768px) {
+@media (max-width:  768px) {
   .body {
     min-height: 60vh;
     background-image: url url("/static/images/translate.jpg"); /* optional */
@@ -224,12 +223,12 @@
   .main-head,
   .line,
   .fast {
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   .btn-Whatsapp,
   .btn-quote {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
@@ -298,7 +297,15 @@
   width:300px
 }
 
-
+@media (max-width: 768px) {
+  .brand {
+    position: static;   /* ✅ remove absolute */
+    display: block;
+    margin: 10px auto;  /* center it */
+    width: 180px;       /* smaller for mobile */
+    height: auto;
+  }
+}
 
 .language{
   height:380px;
