@@ -107,7 +107,7 @@
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .body {
     min-height: 60vh;
     background-image: url url("/static/images/translate.jpg"); /* optional */
