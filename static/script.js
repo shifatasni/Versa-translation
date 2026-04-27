@@ -149,6 +149,7 @@ function sendToWhatsApp(event) {
 
 
 
+
 function toggleMenu() {
-  document.querySelector(".nav").classList.toggle("active");
+  document.querySelector(".navbar-nav").classList.toggle("active");
 }
