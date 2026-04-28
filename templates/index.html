@@ -11,42 +11,66 @@
     </h1>
     <div class="line"></div>
     <h3 class="fast">fast & Accurate Translation in Your Languages</h3>
+
+  <div class="home-buttons">
     <button class="btn-quote" onclick="openForm()">Get a Free Quote</button>
 
-<div id="quoteForm" class="form-popup">
-  <form class="form-container" onsubmit="sendToWhatsApp(event)">
-    <h2>Get a Quote</h2>
+      <div id="quoteForm" class="form-popup">
+         <form class="form-container" onsubmit="sendToWhatsApp(event)">
+          <h2>Get a Quote</h2>
 
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
-    <textarea id="message" placeholder="Your Message"></textarea>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
 
-    <button type="submit" class="btn-submit">Submit</button>
-    <button type="button" class="btn-close2" onclick="closeForm()">Close</button>
-  </form>
-</div>
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="button" class="btn-close2" onclick="closeForm()">Close</button>
+        </form>
+      </div>
     
     <button class="btn-Whatsapp"  onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
-</section>
+</div>
+
+  </section>
 
 
 
 <section class="service">
+    <div class="heading-wrapper">
+    <div class="line1"></div>
     <h1 class="our-serv">Our Services</h1>
     <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="serv-div">
-      <i class="fa-solid fa-headset fa-2xl"  id="fa-headset"></i>
-      <h3 class="audio">Audio<br>Translation</h3>
-      <div class="line3"></div>
-      <i class="fa-regular fa-file-lines fa-2xl" id="fa-file"></i>
-      <h3 class="document">Document<br> Translation</h3>
-      <div class="line4"></div>
-      <i class="fa-solid fa-video fa-2xl" id="video-icon"></i>
-      <h3 class="video">Video<br> Translation</h3>
-      <div class="line5"></div>
-      <i class="fa-solid fa-laptop fa-2xl" id="lap-icon"></i>
-      <h3 class="website">Website Localization</h3>
+    </div>
+
+
+   <div class="serv-div">
+
+      <div class="serv-item">
+        <i class="fa-solid fa-headset"></i>
+        <h3>Audio<br>Translation</h3>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="serv-item">
+        <i class="fa-regular fa-file-lines"></i>
+        <h3>Document<br>Translation</h3>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="serv-item">
+        <i class="fa-solid fa-video"></i>
+        <h3>Video<br>Translation</h3>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="serv-item">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>Website<br> Localization</h3>
+      </div>
+
     </div>
 </section>
 
@@ -66,19 +90,30 @@
 
 <section class="choose">
     <h2 class="choose-head">Why Choose <span id="versa">Versa</span>?</h2>
-     <img class="quality" src="{% static 'images/quality.png' %}">
+  <div class="choose-grid">
+    <div   class="choose-card">
+    <img class="quality" src="{% static 'images/quality.png' %}">
     <h4 class="cert-trans">Certified Translators</h4>
+    </div>
+    <div   class="choose-card">
     <img class="consistency" src="{% static 'images/consistency.png' %}">
     <h4 class="fast-rel">Fast & Reliable</h4>
+    </div>
+    <div   class="choose-card">
     <img class="security" src="{% static 'images/security.png' %}">
     <h4 class="conf-sec">Confidential & Secure</h4>
+    </div>
+    <div   class="choose-card">
     <img class="discount" src="{% static 'images/discount.png' %}">
     <h4 class="aff-rate">Affordable Rates</h4>
+    </div>
+  </div> 
 </section>
 
 <section class="works">
    <h2 class="works-head"> How It Works</h2>
     <div class="line6"></div>
+    <div class="works-content">
     <div class="upload-doc">
         <img class="upload" src="{% static 'images/upload.png' %}">
         <h5 class="upload-head"><span  id="span123">1.</span> Upload Your Document</h5>
@@ -90,11 +125,13 @@
     <div class="get-a-quote">
         <img class="payment" src="{% static 'images/payment.png' %}">
         <h5 class="get-head"><span id="span123">2.</span> Get A Quote</h5>
+        <div class="li-div">
         <ul class="get-ul">
-            <li>Upload your document</li>
-            <li>Tell us the language pair</li>
-            <li>We calculate the price and<br> send it to you</li>
+            <li >Upload your document</li>
+            <li >Tell us the language pair</li>
+            <li >We calculate the price and<br> send it to you</li>
         </ul>
+        </div>
     </div>
     <div class="receive-div">
         <img class="translator" src="{% static 'images/translator.png' %}">
@@ -103,6 +140,7 @@
              with high accuracy,  <br>
              preserved formatting, and on-time <br>delivery.</h7>
     </div>
+  </div>
     <!-- From Uiverse.io by Allyhere --> 
     <button id="quoteBtn">Get a Free Quote</button>
     <!-- Popup Form -->
@@ -137,8 +175,8 @@
         </form>
       </div>
     </div>
-        <div class="line-big"></div>
-    
+   
+       
 </section>
 
 
