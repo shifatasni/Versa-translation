@@ -150,6 +150,8 @@ function sendToWhatsApp(event) {
 
 
 
+
 function toggleMenu() {
-  document.querySelector(".navbar-nav").classList.toggle("active");
+  document.getElementById("navLinks").classList.toggle("active");
 }
+
