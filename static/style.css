@@ -49,11 +49,21 @@
   cursor: pointer;
 }
 
-/* 📱 MOBILE */
+
 @media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #1d2b4f;
+  }
+
+  .nav {
+    padding: 12px 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   }
 
   .navbar-nav {
@@ -62,16 +72,44 @@
     left: 0;
     width: 100%;
 
-    background: white;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px 0;
+    align-items: center;
+    gap: 18px;
 
-    display: none;
+    padding: 25px 0;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    /* animation */
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
   }
 
   .navbar-nav.active {
-    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-nav a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1d2b4f;
+    padding: 8px 0;
+    transition: 0.3s;
+  }
+
+  .navbar-nav a:hover {
+    color: rgb(15, 64, 120);
+    transform: scale(1.05);
   }
 
   .brand {
@@ -210,47 +248,9 @@
 }
 
 
-/* Base state */
-.main-head,
-.line,
-.fast,
-.btn-quote,
-.btn-Whatsapp {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: all 0.6s ease;
-}
 
-/* Hover trigger */
-.home:hover .main-head {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.1s;
-}
 
-.home:hover .line {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.1s;
-}
 
-.home:hover .fast {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.1s;
-}
-
-.home:hover .btn-quote {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.1s;
-}
-
-.home:hover .btn-Whatsapp {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.1s;
-}
 
 
 @media (max-width: 768px) {
@@ -262,7 +262,7 @@
   }
 
   .line {
-    margin: 15px auto;   /* 🔥 center line */
+    margin: 0px auto;   /* 🔥 center line */
   }
 
   .home-buttons {
@@ -1015,8 +1015,9 @@
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   position: relative;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
+
 
 /* Bottom blue line */
 .card-box::after {
@@ -1071,6 +1072,28 @@
 }
 
  
+@media (max-width: 768px) {
+
+  .card-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .card-box {
+    min-width: 80%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* hide scrollbar (optional) */
+  .card-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 
 
 .lang-section-new {
@@ -1381,11 +1404,6 @@
   box-sizing: border-box;
 }
 
-body {
-  
-  overflow-x: hidden;
-  line-height: 1.5;
-}
 
 
 
@@ -1397,7 +1415,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .body,
+ 
   .serv-div,
   .works,
   .choose {
