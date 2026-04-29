@@ -158,3 +158,23 @@ function toggleMenu() {
 
 
 
+  const grid = document.getElementById("cardGrid");
+
+  function slideLeft() {
+    const card = document.querySelector(".card-box");
+    grid.scrollBy({
+      left: -(card.offsetWidth + 15),
+      behavior: "smooth"
+    });
+  }
+
+  function slideRight() {
+    const card = document.querySelector(".card-box");
+    grid.scrollBy({
+      left: (card.offsetWidth + 15),
+      behavior: "smooth"
+    });
+  }
+
+
+ 

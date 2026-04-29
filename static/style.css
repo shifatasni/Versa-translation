@@ -49,75 +49,109 @@
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
     font-size: 30px;
     cursor: pointer;
-    color: #1d2b4f;
+    color: black;
+    z-index: 1001;
   }
 
   .nav {
-    padding: 12px 20px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 12px 10px;
+    position: relative;
+    z-index: 1000;
   }
 
+  /* RIGHT SIDE MENU */
   .navbar-nav {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -280px;   /* hidden outside */
+    width: 260px;    /* NOT full width */
+    height: 100vh;
 
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 18px;
+    align-items: flex-start;
+    gap: 20px;
 
-    padding: 25px 0;
+    padding: 80px 20px;
 
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
+    background: rgb(7, 38, 74);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
 
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-
-    /* animation */
-    transform: translateY(-20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    transition: right 0.3s ease;
   }
 
+  /* ACTIVE STATE */
   .navbar-nav.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+    right: 0;
   }
 
   .navbar-nav a {
     font-size: 16px;
     font-weight: 500;
-    color: #1d2b4f;
-    padding: 8px 0;
-    transition: 0.3s;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .navbar-nav a:hover {
-    color: rgb(15, 64, 120);
-    transform: scale(1.05);
+   color: rgb(250, 231, 205);
+   
   }
 
   .brand {
     height: 45px;
   }
-}
-  
 
+  .nav-contact {
+  margin-top: 0px;
+  width: 100%;
+
+  padding-top: 15px;
+}
+
+.nav-contact a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+ 
+  
+}
+
+
+
+
+/* Email style */
+.nav-contact .email {
+  color: white;
+}
+
+
+
+/* WhatsApp button style */
+.nav-contact .whatsapp {
+ 
+  color: white;
+  
+  margin-left:10;
+  text-align: left;
+  font-weight: 500;
+}
+
+
+}
+
+
+
+/* DEFAULT (desktop) → hide */
+.nav-contact {
+  display: none;
+}
 
 
 .body {
@@ -193,10 +227,11 @@
 .fast{
   color:rgb(231, 214, 192);
   font-weight:100 ;
+  opacity: 0.7;
   margin-bottom: 80px;
   margin-left: 70px;
   margin-top: 40px;
-  
+  font-size: 25px;
 }
 
 .home-buttons {
@@ -255,14 +290,24 @@
 
 @media (max-width: 768px) {
 
-  .main-head,
+  
+  .main-head{
+    margin-top: 0;
+    margin-left: 50px;
+    text-align: center;
+  }
   .fast {
     margin-left: 0;
     text-align: center;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-size: 21px;
+   
   }
 
   .line {
-    margin: 0px auto;   /* 🔥 center line */
+    margin: 0px auto; 
+    width:100%  /* 🔥 center line */
   }
 
   .home-buttons {
@@ -1071,29 +1116,71 @@
   
 }
 
- 
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
 
   .card-grid {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px 45px;
     scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
   }
 
+  /* SMALL WIDTH + LONG HEIGHT */
   .card-box {
-    min-width: 80%;
+    min-width: 75%;
+    height: 280px;
     flex: 0 0 auto;
     scroll-snap-align: start;
   }
 
-  /* hide scrollbar (optional) */
+  /* SHOW BUTTONS */
+  .slide-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .slide-btn.left { left: 5px; }
+  .slide-btn.right { right: 5px; }
+
   .card-grid::-webkit-scrollbar {
     display: none;
   }
 }
 
+/* ===== MOBILE SLIDER ===== */
+.card-slider {
+  position: relative;
+}
+
+/* hide buttons on desktop */
+.slide-btn {
+  display: none;
+}
 
 
 .lang-section-new {
