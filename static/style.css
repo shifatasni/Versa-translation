@@ -49,6 +49,11 @@
   cursor: pointer;
 }
 
+.email,
+.whatsapp{
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -148,46 +153,72 @@
 
 
 
-/* DEFAULT (desktop) → hide */
-.nav-contact {
-  display: none;
-}
 
 
+
+
+
+/* ===== BASE (ALL SCREENS) ===== */
 .body {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  gap: 20px;
-
+  position: relative;
   width: 100%;
-  min-height: 100vh;
-
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("/static/images/translate.jpg");
-
-  background-size: cover;          /* fills screen */
-  background-position: center;     /* keeps center visible */
-  background-repeat: no-repeat;
+  height: 100vh;          /* full screen */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 🔥 MOBILE FIX */
+/* IMAGE */
+.body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills screen nicely */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* GRADIENT OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.6)
+  );
+  z-index: 1;
+}
+
+/* TEXT */
+.body-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  max-width: 80%;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .body-text {
+    font-size: 32px;
+  }
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .body {
-    min-height: 100vh;             /* 🔥 important */
-    background-size: cover;        /* keep full screen fill */
-    background-position: center;   /* prevent weird crop */
+    height: 80vh; /* slightly smaller for mobile */
+  }
+
+  .body-text {
+    font-size: 24px;
+    max-width: 90%;
   }
 }
 
-/* 🔥 SMALL MOBILE (extra fix) */
-@media (max-width: 480px) {
-  .body {
-    min-height: 100vh;
-    background-position: center center;
-  }
-}
 
 .home{
   display: flex;
@@ -386,6 +417,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+
+  
 }
 
 /* LANGUAGE BOX */
@@ -395,11 +428,8 @@
   padding: 15px;
   border-radius: 8px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease;
+  
 }
-
 
 
 
@@ -418,10 +448,7 @@
   transition: 0.3s;
 }
 
-.language:hover .lang-head {
-  letter-spacing: 2px;
- 
-}
+
 
 
 
@@ -439,88 +466,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* Hover effect (trigger animation) */
-.language:hover .lang-div-main div {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ✨ Delay for smooth sequence */
-.language:hover .lang-div1 {
-  transition-delay: 0.1s;
-}
-
-.language:hover .lang-div2 {
-  transition-delay: 0.3s;
-}
-
-.language:hover .lang-div3 {
-  transition-delay: 0.5s;
-}
-.language:hover .lang-div4 {
-  transition-delay: 0.7s;
-}
-
-.language:hover .lang-div5 {
-  transition-delay: 0.9s;
-}
-.language:hover .lang-div6 {
-  transition-delay: 1s;
-}
-/* Text style */
-.h5 {
-  margin: 0;
-  font-weight: 500;
-}
-
-/* Optional hover on each item */
-.lang-div-main div:hover {
-  
-  transform: scale(1.05);
-}
-
-
-
-
-/* Initial hidden state */
-.serv-div i,
-.serv-div h3,
-.line3, .line4, .line5 {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.4s ease;
- 
-}
-
-
-
-/* 🔥 Hover main div */
-.service:hover .serv-div i,
-.service:hover .serv-div h3,
-.service:hover .line3,
-.service:hover .line4,
-.service:hover .line5 {
-  opacity: 1;
-  transform: scale(1);
-   animation-fill-mode: forwards
-}
-
-/* ✨ Sequence animation (based on your structure order) */
-.service:hover .fa-solid { transition-delay: 0.2s; }
-.service:hover .audio { transition-delay: 0.3s; }
-
-.service:hover .fa-regular { transition-delay: 0.5s; }
-.service:hover .document { transition-delay: 0.6s; }
-
-.service:hover #video-icon { transition-delay: 0.8s; }
-.service:hover .video { transition-delay: 0.9s; }
-
-.service:hover #lap-icon { transition-delay: 1.1s; }
-.service:hover .website { transition-delay: 1.2s; }
-
-
-
 
 
 
@@ -730,55 +675,6 @@
   }
 }
 
-/* 🔹 Initial hidden state */
-.choose img,
-.choose h4 {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.5s ease;
-}
-
-/* 🔥 Trigger animation on hover */
-.choose:hover img,
-.choose:hover h4 {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ✨ Sequence animation (top-left → top-right → bottom-left → bottom-right) */
-.choose:hover .quality { transition-delay: 0.2s; }
-.choose:hover .cert-trans { transition-delay: 0.3s; }
-
-.choose:hover .consistency { transition-delay: 0.5s; }
-.choose:hover .fast-rel { transition-delay: 0.6s; }
-
-.choose:hover .security { transition-delay: 0.8s; }
-.choose:hover .conf-sec { transition-delay: 0.9s; }
-
-.choose:hover .discount { transition-delay: 1.1s; }
-.choose:hover .aff-rate { transition-delay: 1.2s; }
-
-
-/* Base state (hidden) */
-.choose img,
-.choose h4 {
-  opacity: 0;
-  transform: scale(0.85);
-  transition: all 0.6s ease;
-}
-
-/* Hover state */
-.choose:hover img,
-.choose:hover h4 {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Smooth reset behavior (important) */
-.choose:not(:hover) img,
-.choose:not(:hover) h4 {
-  transition-delay: 0s;
-}
 
 .works{
   width:100%;
@@ -1139,8 +1035,8 @@
 
   /* SMALL WIDTH + LONG HEIGHT */
   .card-box {
-    min-width: 75%;
-    height: 280px;
+    width: 55%;
+    height: 350px;
     flex: 0 0 auto;
     scroll-snap-align: start;
   }
@@ -1441,7 +1337,7 @@
   right: 30px;
   font-size: 20px;
   background:none;
-  color: white;
+  color:black;
   border: none;
   padding: 10px 14px;
   border-radius: 50%;
@@ -1520,3 +1416,5 @@
     grid-template-columns: 1fr;
   }
 }
+
+
