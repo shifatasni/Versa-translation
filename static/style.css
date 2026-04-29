@@ -324,7 +324,7 @@
   
   .main-head{
     margin-top: 0;
-    margin-left: 30px;
+    margin-left: 20px;
     text-align: center;
   }
   .fast {
@@ -530,6 +530,7 @@
 /* Icons */
 .serv-item i {
   font-size: 28px;
+  
 }
 
 /* Text */
@@ -555,6 +556,11 @@
 
   .divider {
     display: none;
+  }
+
+  .serv-item i {
+  font-weight: 100;
+  
   }
 }
 
