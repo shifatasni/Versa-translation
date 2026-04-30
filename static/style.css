@@ -834,41 +834,61 @@
   .works-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 10px;
     max-width: 100%;
     margin: auto;
   }
 
-  /* 🔥 Make all cards compact */
   .works-content > div {
-    padding: 12px;        /* reduced height */
-    font-size: 14px;
+    text-align: center;
+    padding: 6px;
+       /* 🔥 prevents overflow */
   }
 
-  /* 🔥 Center 3rd item */
-  .works-content > :nth-child(3) {
-    grid-column: span 2;
+  /* Row 1 items */
+  .works-content > div:nth-child(1),
+  .works-content > div:nth-child(2) {
+    grid-row: 1;
+  }
+
+
+  /* Row 2 centered */
+  .works-content > div:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
     justify-self: center;
-    width: 70%;          /* smaller centered box */
-    padding: 12px;
+    max-width: 160px;   /* 🔥 controlled width */
   }
 
-  /* 🔥 reduce images size */
+  /* 🔥 smaller images */
   .upload,
   .payment,
   .translator {
-    height: 50px;
-    width: 50px;
+    height: 1px;
+    width: 1px;
   }
 
-  /* 🔥 text compact */
+  /* 🔥 compact text */
   .upl-des,
   .get-ul,
   .rec-des {
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .upload-head,
+  .get-head,
+  .receive-head {
+    font-size: 20px;
   }
 }
+
+
+
+
 
 
 .works-content {
