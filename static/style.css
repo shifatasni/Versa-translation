@@ -199,7 +199,7 @@
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .body {
-    height: 50vh; /* slightly smaller for mobile */
+    height: 40vh; /* slightly smaller for mobile */
   }
 
 }
@@ -325,7 +325,7 @@
     text-align: center;
     opacity: 0.7;
     letter-spacing: 1px;
-    font-size: 21px; /* ✅ keep same */
+    font-size: 15px; /* ✅ keep same */
   }
 
   .line {
@@ -343,7 +343,7 @@
   .btn-quote,
   .btn-Whatsapp {
     margin: 0;
-    padding: 10px 15px;
+    padding: 5px 10px;
     font-size: 14px;
     white-space: nowrap; /* prevent text break */
   }
@@ -531,21 +531,58 @@
 
 
 
-/* 🔥 TABLET */
 @media (max-width: 768px) {
-  .lang-div-main {
-    grid-template-columns: repeat(2, 1fr);
 
+  .lang-div-main {
+    grid-template-columns: repeat(3, 1fr); /* keep same */
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .lang-div-main div {
+    padding: 10px;
+    font-size: 14px; /* 🔥 shrink text */
+  }
+
+  .h5 {
+    font-size: 13px;
+  }
+
+}
+
+
+
+/* initial state */
+.lang-head,
+.lang-div-main div {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* 🔥 MOBILE */
-@media (max-width: 480px) {
-  .lang-div-main {
-    grid-template-columns: 1fr;
-  }
+/* apply */
+.lang-head {
+  animation: fadeUp 0.8s ease forwards;
 }
 
+.lang-div-main div {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* delay for each box (nice stagger effect) */
+.lang-div-main div:nth-child(1) { animation-delay: 0.1s; }
+.lang-div-main div:nth-child(2) { animation-delay: 0.2s; }
+.lang-div-main div:nth-child(3) { animation-delay: 0.3s; }
+.lang-div-main div:nth-child(4) { animation-delay: 0.4s; }
+.lang-div-main div:nth-child(5) { animation-delay: 0.5s; }
+.lang-div-main div:nth-child(6) { animation-delay: 0.6s; }
 
 
 
@@ -626,39 +663,20 @@
   background-color: rgb(129, 120, 120);
 }
 
-/* 🔥 Tablet */
+
 @media (max-width: 768px) {
+
   .serv-div {
-    height:200px;
-    grid-template-rows: repeat(2, 2fr);
-    font-size: smaller;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .serv-item i {
-  font-weight: 100;
- 
-  
-  }
-
-  
-  
-}
-
-/* 🔥 Mobile */
-@media (max-width: 480px) {
-  .serv-div {
-    flex-direction: column;
-    grid-template-rows: repeat(2, 2fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; /* important for clean lines */
   }
 
   .serv-item {
-    justify-content: center;
-    grid-template-rows: repeat(2, 2fr);
-    width:auto;
+    padding: 15px;
+    border: 1px solid rgb(129, 120, 120); /* 🔥 grid lines */
+    text-align: center;
+    flex-direction: column;
   }
 }
 
@@ -759,6 +777,7 @@
 }
 
 @media (max-width: 768px) {
+  
   .choose-grid {
     grid-template-columns: 1fr;
   }
@@ -805,15 +824,20 @@
   justify-content: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .works-content {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 768px) {
-  .works-content {
-    grid-template-columns: 1fr;
+  /* Center the 3rd item */
+  .works-content > :nth-child(3) {
+    grid-column: span 2;       /* take full row */
+    justify-self: center;      /* center it */
+    max-width: 300px;          /* optional: control width */
+  }
+
+  .works-content > div {
+   padding: 20px;
   }
 }
 
