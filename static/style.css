@@ -334,19 +334,21 @@
   }
 
   .home-buttons {
-    display: flex;              /* 🔥 IMPORTANT */
-    justify-content: center;
-    gap: 10px;                  /* space between buttons */
-    flex-wrap: nowrap;          /* keep in one line */
-  }
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap; /* ✅ allow wrapping if needed */
+}
 
-  .btn-quote,
-  .btn-Whatsapp {
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 14px;
-    white-space: nowrap; /* prevent text break */
-  }
+.btn-quote,
+.btn-Whatsapp {
+  margin: 0;
+  padding: 6px 10px;   /* 🔥 smaller padding */
+  font-size: 12px;     /* 🔥 smaller text */
+  white-space: nowrap;
+  flex: 1 1 auto;      /* ✅ flexible width */
+  max-width: 140px;    /* 🔥 prevent stretching */
+}
 
 }
 
@@ -534,22 +536,25 @@
 @media (max-width: 768px) {
 
   .lang-div-main {
-    grid-template-columns: repeat(3, 1fr); /* keep same */
-    gap: 10px;
-    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 per row */
+    gap: 8px;
+    padding: 10px;
   }
 
   .lang-div-main div {
-    padding: 10px;
-    font-size: 14px; /* 🔥 shrink text */
+    padding: 8px;
+    font-size: 12px;   /* 🔥 smaller text */
+    text-align: center;
+    box-sizing: border-box; /* ✅ VERY IMPORTANT */
   }
 
   .h5 {
-    font-size: 13px;
+    font-size: 12px;
+    white-space: nowrap; /* 🔥 prevent breaking */
   }
 
 }
-
 
 
 /* initial state */
@@ -668,15 +673,27 @@
 
   .serv-div {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0; /* important for clean lines */
+    grid-template-columns: repeat(4, 1fr); /* 🔥 4 in one row */
+    gap: 8px;
   }
 
   .serv-item {
-    padding: 15px;
-    border: 1px solid rgb(129, 120, 120); /* 🔥 grid lines */
+    padding: 8px;              /* 🔥 reduce height */
     text-align: center;
     flex-direction: column;
+  }
+
+  .serv-item i {
+    font-size: 18px;           /* 🔥 smaller icon */
+  }
+
+  .serv-item h3 {
+    font-size: 12px;           /* 🔥 smaller text */
+    margin-top: 5px;
+  }
+
+  .divider {
+    display: none; /* not needed */
   }
 }
 
@@ -827,6 +844,8 @@
 @media (max-width: 768px) {
   .works-content {
     grid-template-columns: repeat(2, 1fr);
+    justify-self: center;      /* center it */
+    max-width: 300px; 
   }
 
   /* Center the 3rd item */
@@ -1279,8 +1298,22 @@
   .lang-list-new {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
 
+  .lang-list-new div {
+    height: 40px;              /* 🔥 small height */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    white-space: nowrap;       /* 🔥 keep text in one line */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* if text is long */
+    border-radius: 6px;
+  }
   .lang-title-new {
     font-size: 28px;
   }
