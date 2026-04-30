@@ -635,10 +635,19 @@
 
 @media (max-width: 768px) {
 
+  .heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;   /* 🔥 VERY IMPORTANT */
+  margin: 5px 0;
+  margin-top: 0px;
+  }
+
   .serv-div {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)); /* 🔥 prevents overflow */
-    gap: 5px;
+    gap: 10px;
     width: 80%;
     margin-left: 0;
     box-sizing: border-box;
