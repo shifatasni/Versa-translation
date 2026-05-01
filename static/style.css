@@ -665,7 +665,7 @@
   .heading-wrapper {
     margin: 10px 0;  /* reduce top/bottom space */
   }
-}
+
 
   .serv-item {
     flex: 1 1 0 !important;
@@ -683,7 +683,7 @@
   }
 
   .serv-item h3 {
-    font-size: 9px !important;
+    font-size: 10px !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -1373,9 +1373,14 @@
   }
 
   .lang-list-new div {
-    height: 40px;
-    width: 100%; /* ✅ take full grid column */
+     height: auto;              /* 🔥 allow height to grow */
+    min-height: 40px;
 
+    font-size: 11px;
+    padding: 5px;
+
+         
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
