@@ -637,6 +637,9 @@
 
 
 @media (max-width: 768px) {
+.service {
+    padding: 25px 10px;   /* 🔥 main height reduction */
+  }
 
   .serv-div {
     display: flex !important;
@@ -644,13 +647,14 @@
     flex-wrap: nowrap !important;
 
     width: 100% !important;
-    height: auto;
+    height: 40;
     overflow: hidden !important;
 
     justify-content: space-between !important;
     align-items: center !important;
-
-    gap: 4px !important;
+    
+   margin-top: 10px;     /* 🔥 reduce gap */
+    gap: 2px;
   }
 
    .our-serv {
@@ -663,7 +667,7 @@
   }
 
   .heading-wrapper {
-    margin: 10px 0;  /* reduce top/bottom space */
+    margin: 8px 0;   /* reduce top/bottom space */
   }
 
 
@@ -675,7 +679,7 @@
     flex-direction: column !important;
     align-items: center !important;
 
-    padding: 6px 2px !important;
+    padding: 2px 2px !important;
   }
 
   .serv-item i {
@@ -687,6 +691,8 @@
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+     margin: 2px 0;
+    line-height: 1.1;
   }
 
   .divider {
