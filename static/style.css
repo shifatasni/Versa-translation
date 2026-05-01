@@ -545,25 +545,16 @@
 @media (max-width: 768px) {
 
   .lang-div-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row */
+    display: grid !important;                /* 🔥 force grid */
+    grid-template-columns: repeat(2, 1fr) !important; /* 🔥 2 per row */
     gap: 10px;
     width: 100%;
   }
 
   .lang-div-main div {
-    height: 45px;
-    width: 100%; /* ✅ IMPORTANT FIX */
-    font-size: 12px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 100% !important;  /* 🔥 very important */
   }
+
 }
 
 
@@ -653,6 +644,7 @@
     flex-wrap: nowrap !important;
 
     width: 100% !important;
+    height: auto;
     overflow: hidden !important;
 
     justify-content: space-between !important;
@@ -661,9 +653,19 @@
     gap: 4px !important;
   }
 
-  .heading-wrapper{
-   margin-top: auto;
+   .our-serv {
+    font-size: 18px;   /* 🔥 reduce heading size */
+    margin: 0 8px;     /* reduce side spacing */
   }
+
+  .line1 {
+    max-width: 80px;   /* 🔥 shorter lines on mobile */
+  }
+
+  .heading-wrapper {
+    margin: 10px 0;  /* reduce top/bottom space */
+  }
+}
 
   .serv-item {
     flex: 1 1 0 !important;
@@ -1362,28 +1364,32 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
+
   .lang-list-new {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* ✅ better fit than 3 */
     gap: 10px;
   }
 
   .lang-list-new div {
-    height: 40px;              /* 🔥 small height */
-    width: 100px;
+    height: 40px;
+    width: 100%; /* ✅ take full grid column */
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 5px;
-    white-space: nowrap;       /* 🔥 keep text in one line */
+    font-size: 10px;
+    padding: 0 5px;
+
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;   /* if text is long */
+    text-overflow: ellipsis;
+
     border-radius: 50px;
   }
+
   .lang-title-new {
     font-size: 20px;
   }
@@ -1392,7 +1398,6 @@
     font-size: 14px;
   }
 }
-
 
 
 .contact-section {
