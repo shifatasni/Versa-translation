@@ -1379,7 +1379,7 @@
   }
 
   .lang-list-new div {
-     height: auto;              /* 🔥 allow height to grow */
+    height: auto;              /* 🔥 allow height to grow */
     min-height: 40px;
 
     font-size: 11px;
@@ -1408,6 +1408,18 @@
   .lang-desc-new {
     font-size: 14px;
   }
+
+  .lang-box-new h5 {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.2;
+
+  white-space: normal;   /* ✅ allow wrapping */
+  text-align: center;
+
+  word-break: break-word; /* 🔥 prevents overflow */
+}
+
 }
 
 
@@ -1678,5 +1690,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+
 
 
