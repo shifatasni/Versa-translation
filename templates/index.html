@@ -13,14 +13,14 @@
 
 
 <section class="home">
-    <h1 class="main-head">Professional Translation Services<br>
+    <h1 class="main-head" data-aos="fade-left">Professional Translation Services<br>
        You Can Trust
     </h1>
-    <div class="line"></div>
-    <h3 class="fast">fast & Accurate Translation in Your Languages</h3>
+    <div class="line" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"></div>
+    <h3 class="fast"  data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">fast & Accurate Translation in Your Languages</h3>
 
-  <div class="home-buttons">
-    <button class="btn-quote" onclick="openForm()">Get a Free Quote</button>
+  <div class="home-buttons" data-aos="fade-left" data-aos-delay="300">
+    <button class="btn-quote"  onclick="openForm()">Get a Free Quote</button>
 
       <div id="quoteForm" class="form-popup">
          <form class="form-container" onsubmit="sendToWhatsApp(event)">
@@ -35,7 +35,7 @@
         </form>
       </div>
     
-    <button class="btn-Whatsapp"  onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
+    <button class="btn-Whatsapp" onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
 </div>
 
   </section>
@@ -52,31 +52,41 @@
 
    <div class="serv-div">
 
-      <div class="serv-item">
+
+    <a href="/services" class="serv-link"  >
+      <div class="serv-item" data-aos="fade-up">
         <i class="fa-solid fa-headset"></i>
         <h3>Audio<br>Translation</h3>
       </div>
+    </a>
 
       <div class="divider"></div>
 
-      <div class="serv-item">
+    <a href="/services" class="serv-link">
+      <div class="serv-item"   data-aos="fade-up" data-aos-delay="200">
         <i class="fa-regular fa-file-lines"></i>
         <h3>Document<br>Translation</h3>
       </div>
+    </a>
 
       <div class="divider"></div>
 
-      <div class="serv-item">
+    <a href="/services" class="serv-link">
+      <div class="serv-item"   data-aos="fade-up" data-aos-delay="400">
         <i class="fa-solid fa-video"></i>
         <h3>Video<br>Translation</h3>
       </div>
+    </a>
 
       <div class="divider"></div>
 
-      <div class="serv-item">
+    <a href="/services" class="serv-link">
+      <div class="serv-item"  data-aos="fade-up" data-aos-delay="600">
         <i class="fa-solid fa-laptop"></i>
         <h3>Website<br> Localization</h3>
       </div>
+    </a>
+
 
     </div>
 </section>
@@ -85,32 +95,32 @@
 <section class="language">
         <h2 class="lang-head"><span id="first-letter">L</span >anguages <span id="first-letter" >W</span>e <span id="first-letter">T</span>ranslate</h2>
         <div class="lang-div-main">
-            <div class="lang-div1"><h5 class="h5">English - Arabic</h5></div>
-            <div class="lang-div2"><h5 class="h5">English - Hindi</h5></div>
-            <div class="lang-div3"><h5 class="h5">English - Urdu</h5></div>
-            <div class="lang-div4"><h5 class="h5">Arabic - English</h5></div>
-            <div class="lang-div5"><h5 class="h5">Arabic - Hindi</h5></div>
-            <div class="lang-div6"><h5 class="h5">Arabic - Urdu</h5></div>
+            <div class="lang-div1" data-aos="zoom-in"><h5 class="h5">English - Arabic</h5></div>
+            <div class="lang-div2" data-aos="zoom-in" data-aos-delay="100"><h5 class="h5">English - Hindi</h5></div>
+            <div class="lang-div3" data-aos="zoom-in" data-aos-delay="200"><h5 class="h5">English - Urdu</h5></div>
+            <div class="lang-div4" data-aos="zoom-in" data-aos-delay="300"><h5 class="h5">Arabic - English</h5></div>
+            <div class="lang-div5" data-aos="zoom-in" data-aos-delay="400"><h5 class="h5">Arabic - Hindi</h5></div>
+            <div class="lang-div6" data-aos="zoom-in" data-aos-delay="500"><h5 class="h5">Arabic - Urdu</h5></div>
         </div>
       
 </section>
 
 <section class="choose">
-    <h2 class="choose-head">Why Choose <span id="versa">Versa</span>?</h2>
+    <h2 class="choose-head" data-aos="zoom-out-right" >Why Choose <span id="versa">Versa</span>?</h2>
   <div class="choose-grid">
-    <div   class="choose-card">
+    <div   class="choose-card" data-aos="zoom-out-right">
     <img class="quality" src="{% static 'images/quality.png' %}">
     <h4 class="cert-trans">Certified Translators</h4>
     </div>
-    <div   class="choose-card">
+    <div   class="choose-card" data-aos="zoom-out-right">
     <img class="consistency" src="{% static 'images/consistency.png' %}">
     <h4 class="fast-rel">Fast & Reliable</h4>
     </div>
-    <div   class="choose-card">
+    <div   class="choose-card" data-aos="zoom-out-right">
     <img class="security" src="{% static 'images/security.png' %}">
     <h4 class="conf-sec">Confidential & Secure</h4>
     </div>
-    <div   class="choose-card">
+    <div   class="choose-card" data-aos="zoom-out-right">
     <img class="discount" src="{% static 'images/discount.png' %}">
     <h4 class="aff-rate">Affordable Rates</h4>
     </div>
@@ -118,10 +128,12 @@
 </section>
 
 <section class="works">
-   <h2 class="works-head"> How It Works</h2>
-    <div class="line6"></div>
+   <h2 class="works-head" data-aos="fade-down"> How It Works</h2>
+    <div class="line6" data-aos="fade-down" data-aos-delay="200"
+     data-aos-duration="1000"></div>
     <div class="works-content">
-    <div class="upload-doc">
+    <div class="upload-doc" data-aos="fade-down" data-aos-delay="400"
+     data-aos-duration="1000">
         <img class="upload" src="{% static 'images/upload.png' %}">
         <h5 class="upload-head"><span  id="span123">1.</span> Upload Your Document</h5>
         <h7 class="upl-des">Upload your document to get<br>
@@ -129,7 +141,8 @@
               Supported formats include PDF, <br>
               Word, and text files.</h7>
     </div>
-    <div class="get-a-quote">
+    <div class="get-a-quote" data-aos="fade-down" data-aos-delay="600"
+     data-aos-duration="1000">
         <img class="payment" src="{% static 'images/payment.png' %}">
         <h5 class="get-head"><span id="span123">2.</span> Get A Quote</h5>
         <div class="li-div">
@@ -140,7 +153,8 @@
         </ul>
         </div>
     </div>
-    <div class="receive-div">
+    <div class="receive-div" data-aos="fade-down" data-aos-delay="800"
+     data-aos-duration="1000">
         <img class="translator" src="{% static 'images/translator.png' %}">
         <h5 class="receive-head"><span  id="span123">3.</span> Receive Your Translation</h5>
         <h7 class="rec-des">Receive your completed<br> translation
@@ -149,7 +163,8 @@
     </div>
   </div>
     <!-- From Uiverse.io by Allyhere --> 
-    <button id="quoteBtn">Get a Free Quote</button>
+    <button id="quoteBtn" data-aos="fade-down" data-aos-delay="1000"
+     data-aos-duration="1000">Get a Free Quote</button>
     <!-- Popup Form -->
     <div id="popup" class="popup">
        <div class="popup-content">
@@ -229,6 +244,17 @@
 <button onclick="goTop()" id="topBtn"><i class="fa-solid fa-circle-chevron-up fa-xl"></i></button>
 
 
+<!-- ✅ AOS JS (MUST be at bottom) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+  <!-- ✅ INIT AOS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
 
 {% endblock %}

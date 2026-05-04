@@ -365,36 +365,8 @@
 
 
 
-/* INITIAL STATE */
-.main-head,
-.fast,
-.home-buttons {
-  opacity: 0;
-  transform: translateY(30px);
-}
 
-/* ANIMATION */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* APPLY ANIMATION */
-.main-head {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.fast {
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.home-buttons {
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.6s;
-}
 
 
 
@@ -1693,4 +1665,18 @@
 
 
 
+.serv-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
 
+
+
+
+
+
+/* ❗ SAFETY FIX (prevents hidden issue) */
+[data-aos] {
+  visibility: visible !important;
+}
