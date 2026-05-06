@@ -1627,6 +1627,30 @@
   border: none;
 }
 
+
+/* 📱 Mobile optimization */
+@media (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .form-container h2 {
+    font-size: 18px;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .form-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1671,7 +1695,12 @@
   display: inline-block;
 }
 
-
+.submit2{
+ background-color:  #01152e;
+ border-radius: 30px;
+ width: 150px;
+color: white;
+}
 
 
 
