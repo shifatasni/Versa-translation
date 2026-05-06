@@ -1630,24 +1630,13 @@
 
 /* 📱 Mobile optimization */
 @media (max-width: 480px) {
-  .form-container {
-    width: 95%;
-    padding: 15px;
+  .btn-group {
+    gap: 8px;
   }
 
-  .form-container h2 {
-    font-size: 18px;
-  }
-
-  .form-container input,
-  .form-container textarea {
+  .btn-group button {
+    padding: 10px;
     font-size: 13px;
-    padding: 10px;
-  }
-
-  .form-container button {
-    font-size: 14px;
-    padding: 10px;
   }
 }
 
