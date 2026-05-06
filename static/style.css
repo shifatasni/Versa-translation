@@ -1614,14 +1614,14 @@
 }
 
 .btn-submit {
-  background: green;
+  background: rgb(0, 95, 0);
   color: white;
   padding: 10px;
   border: none;
 }
 
 .btn-close2{
-  background:red;
+  background:rgb(148, 12, 12);
   color: white;
   padding: 10px;
   border: none;
@@ -1630,7 +1630,15 @@
 
 /* 📱 Mobile optimization */
 @media (max-width: 480px) {
-  .btn-group {
+  .form-container input,
+  .form-container textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  }
+  
+  .btn-submit,
+  .btn-close2 {
     gap: 8px;
   }
 
