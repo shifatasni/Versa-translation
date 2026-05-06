@@ -1613,6 +1613,19 @@
   padding: 10px;
 }
 
+/* Button group layout */
+.btn-group {
+  display: flex;
+  gap: 10px; /* space between buttons */
+}
+
+/* Make both buttons equal width */
+.btn-group button {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+}
+
 .btn-submit {
   background: rgb(0, 95, 0);
   color: white;
@@ -1632,8 +1645,7 @@
 @media (max-width: 480px) {
   
   
-  .btn-submit,
-  .btn-close2 {
+  .btn-group {
     gap: 8px;
   }
 
