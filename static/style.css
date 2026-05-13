@@ -1600,10 +1600,30 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
+
+  width: 90%;
+  max-width: 450px;   /* keeps it clean on desktop */
+
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   z-index: 1000;
+
+  max-height: 90vh;   /* prevents overflow on small screens */
+  overflow-y: auto;   /* scroll inside popup if content is long */
+}
+
+@media (max-width: 600px) {
+  .form-popup {
+    width: 98%;
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    font-size: 15px;
+  }
 }
 
 .form-container input,
