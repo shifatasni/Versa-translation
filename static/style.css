@@ -574,6 +574,7 @@
   margin-top: 40px;
   flex-wrap: wrap;
   gap: 20px;
+ 
 }
 
 /* Each service item */
@@ -585,6 +586,7 @@
   flex: 1;
   min-width: 200px;
   justify-content: center;
+   
 }
 
 /* Icons */
@@ -598,6 +600,7 @@
   font-weight: 300;
   font-size: 25px;
   font-style: italic;
+  
 }
 
 /* Vertical lines */
@@ -605,13 +608,18 @@
   width: 1px;
   height: 50px;
   background-color: rgb(129, 120, 120);
+  
 }
 
 
 @media (max-width: 768px) {
 .service {
     padding: 25px 10px;   /* 🔥 main height reduction */
+     
+  z-index: 1;
+   
   }
+ 
 
   .serv-div {
     display: flex !important;
@@ -620,12 +628,12 @@
 
     width: 100% !important;
     height: 40;
-    overflow: hidden !important;
+    
 
     justify-content: space-between !important;
     align-items: center !important;
     
-   margin-top: 10px;     /* 🔥 reduce gap */
+    margin-top: 10px;     /* 🔥 reduce gap */
     gap: 2px;
   }
 
@@ -650,12 +658,15 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-
+    position: relative;
+    z-index:100;
     padding: 2px 2px !important;
   }
 
   .serv-item i {
     font-size: 14px !important;
+    position: relative;
+    z-index:100;
   }
 
   .serv-item h3 {
@@ -665,11 +676,14 @@
     text-overflow: ellipsis !important;
      margin: 2px 0;
     line-height: 1.1;
+    position: relative;
+    z-index:100;
   }
 
   .divider {
     display: none !important;
   }
+  
 }
 
 
@@ -1607,7 +1621,7 @@
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  z-index: 1000;
+  z-index: 99999;
 
   max-height: 90vh;   /* prevents overflow on small screens */
   overflow-y: auto;   /* scroll inside popup if content is long */
@@ -1617,13 +1631,15 @@
   .form-popup {
     width: 98%;
     padding: 15px;
-    z-index: 1000;
+    position: fixed;
+    z-index: 99999 !important;
   }
 
   .form-container input,
   .form-container textarea {
     font-size: 15px;
   }
+ 
 }
 
 .form-container input,
@@ -1637,6 +1653,7 @@
 .btn-group {
   display: flex;
   gap: 10px; /* space between buttons */
+  
 }
 
 /* Make both buttons equal width */
@@ -1644,6 +1661,7 @@
   flex: 1;
   padding: 12px;
   font-size: 14px;
+  
 }
 
 .btn-submit {
@@ -1651,6 +1669,7 @@
   color: white;
   padding: 10px;
   border: none;
+  
 }
 
 .btn-close2{
@@ -1658,6 +1677,7 @@
   color: white;
   padding: 10px;
   border: none;
+  
 }
 
 
@@ -1667,11 +1687,13 @@
   
   .btn-group {
     gap: 8px;
+    
   }
 
   .btn-group button {
     padding: 10px;
     font-size: 13px;
+    
   }
 }
 
@@ -1717,6 +1739,7 @@
   text-decoration: none;
   color: inherit;
   display: inline-block;
+
 }
 
 .submit2{
