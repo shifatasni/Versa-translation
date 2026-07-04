@@ -3,10 +3,11 @@
 .nav {
   width: 100%;
   background-color: white;
+  padding: 15px 20px;
   position: fixed;
   top: 0;
   left: 0;
-
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,21 +23,46 @@
 
 /* MENU */
 .navbar-nav {
-   display: flex;
+  display: flex;
   flex-direction: row;   /* 🔥 forces horizontal */
   gap: 20px;
   list-style: none;
   align-items: center;
+
 }
 
 .navbar-nav a {
   text-decoration: none;
-  color: black;
-  font-size: 15px;
+  color: rgb(5, 47, 94);
+  font-size: 17px;
   margin: 0 15px; /* your spacing */
-  font-size: 15px;
+  margin-bottom: 0px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.btn-quote-nav{
+  height: 50px;
+  width: 200px;
+  background-color:  rgb(5, 47, 94);
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 400;
+  color:rgb(240, 209, 169);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 70px;
+ 
+}
+
+.btn-quote-nav:hover{
+  cursor: pointer;
+  background-color:rgb(240, 209, 169) ;
+  color:rgb(5, 47, 94);
+}
 .navbar-nav a:hover {
   border-bottom: 2px solid black;
   color: rgb(15, 64, 120);
@@ -127,10 +153,12 @@
   width: 100%;
   font-size: 14px;
  
-  
+
 }
 
-
+.btn-quote-nav{
+  display: none;
+}
 
 
 /* Email style */
@@ -160,92 +188,55 @@
 
 
 
-/* ===== BASE (ALL SCREENS) ===== */
-.body {
-  position: relative;
-  width: 100%;
-  height: 100vh;          /* full screen */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* IMAGE */
-.body img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* fills screen nicely */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* GRADIENT OVERLAY */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.6)
-  );
-  z-index: 1;
-}
 
 
 
 
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .body {
-    height: 40vh; /* slightly smaller for mobile */
-    position: relative;
-    width: 100%;          /* full screen */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .body img{
-    margin-top: 50px;
-  }
-  
-
-}
-
-
-.home{
+.home { 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
   width: 100%;
+  min-height: 600px;
+
+  background-image: url("/static/images/home.png");
+  background-size: cover;              /* ✅ FULL WIDTH DESKTOP */
+    /* adjust focus */
+  background-repeat: no-repeat;
+
+  margin-top: 30px; /* navbar fix */
   
-  margin: auto;
-  padding: 60px 20px;
-  height: auto;
-  background: linear-gradient(to bottom, rgb(4, 23, 44), rgb(40, 93, 153));
+  
 }
 .main-head{
   color:rgb(227, 207, 181);
  
   font-family: 'Playfair Display', serif;
   font-size: 50px;
-  line-height: 1.3;
+  margin-top: 40px;
+  
+  margin-left: 70px;
+  
+}
+
+#you-can{
+color:white;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  
   margin-bottom: 25px;
   margin-left: 70px;
-   
+  
 }
 
 
-
 .line {
-  width: 520px;
-  height: 1px;
+  width: 150px;
+  height: 1.5px;
   background-color:white;
-  margin: 15px 0;
+  margin: 10px 0;
   margin-left: 70px;
 }
 
@@ -257,34 +248,8 @@
   opacity: 0.7;
   margin-bottom: 80px;
   margin-left: 70px;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 25px;
-}
-
-.home-buttons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Buttons */
-.btn-quote,
-.btn-Whatsapp {
-  height: 50px;
-  width: 200px;
-  background-color: rgb(240, 209, 169);
-  border: none;
-  border-radius: 10px;
-  font-size: larger;
-   font-weight: 400;
-  color: rgb(5, 47, 94);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-left: 70px;
- 
 }
 
 
@@ -292,16 +257,17 @@
 
 .btn-quote:hover,
 .btn-Whatsapp:hover {
-  background-color: rgb(23, 61, 105);
-  color: tan;
+ 
+  background: linear-gradient(135deg, #0a4da3, #052f5e);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 
 
 .bi {
-  position: absolute;
-  left: 15px;
+ 
+ 
   color: rgb(12, 112, 42);
 }
 
@@ -312,107 +278,51 @@
 
 
 
-
-
-
 @media (max-width: 768px) {
 
-  .home{
-    width: 100%;
-    height: auto; /* 🔥 better than fixed height */
-    padding: 20px;
-    align-items: center; /* center content */
+  .home {
+    min-height: 45vh;
+    
+    align-items: flex-start;   /* ✅ KEEP LEFT */
+    text-align: left;
+
+    padding-left: 20px;        /* ✅ reduce spacing */
+    padding-right: 20px;
+    
+    background-position: 50% center ; /* 🔥 focus image like screenshot */
   }
 
-  .main-head{
-    margin: 0;
-    text-align: center;
-    font-size: 32px; /* 🔥 bigger heading */
-    line-height: 1.3;
+  .main-head {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+
+  #you-can{
+  
+  font-size: 22px;
+    line-height: 1.4;
+  margin: 10px 0;
+}
+
+  .line {
+    width: 120px;   /* smaller line like image */
+    margin: 10px 0;
   }
 
   .fast {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     margin: 10px 0;
-    text-align: center;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    font-size: 15px; /* ✅ keep same */
   }
-
-  .line {
-    margin: 10px auto;
-    width: 80%; /* 🔥 cleaner than 100% */
-  }
-
-  .home-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap; /* ✅ allow wrapping if needed */
-}
-
-.btn-quote,
-.btn-Whatsapp {
-  margin: 0;
-  padding: 6px 10px;   /* 🔥 smaller padding */
-  font-size: 12px;     /* 🔥 smaller text */
-  white-space: nowrap;
-  flex: 1 1 auto;      /* ✅ flexible width */
-  max-width: 140px;    /* 🔥 prevent stretching */
-}
 
 }
 
 
 
-
-
-
-
-
-@media (max-width: 768px) {
-
-  .home{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    align-items: center;
-  }
-
-  .main-head{
-    margin: 0;
-    text-align: center;
-    font-size: 32px;
-    line-height: 1.3;
-  }
-
-  .fast {
-    margin: 10px 0;
-    text-align: center;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    font-size: 21px;
-  }
-
-  .line {
-    margin: 10px auto;
-    width: 80%;
-  }
-
-  .home-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-  }
-
-  .btn-quote,
-  .btn-Whatsapp {
-    margin: 0;
-    padding: 10px 15px;
-    font-size: 14px;
-    white-space: nowrap;
-  }
+body {
+  overflow-x: hidden;
 }
 
 
@@ -528,6 +438,35 @@
   }
 
 }
+/* =========================
+   HOME BUTTONS (FIXED ONLY)
+========================= */
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Buttons */
+.btn-quote,
+.btn-Whatsapp {
+  height: 50px;
+  width: 200px;
+  background: linear-gradient(135deg, #052f5e, #0a4da3);
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 400;
+  color: rgb(240, 209, 169);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .service{
@@ -684,6 +623,18 @@
     display: none !important;
   }
   
+  .home-buttons {
+    margin-bottom: 10px;
+  }
+
+  .btn-quote,
+  .btn-Whatsapp {
+    width: 140px;
+    height: 40px;
+    font-size: 13px;
+    margin-left: 0; /* remove extra spacing */
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -1607,24 +1558,36 @@
 
 
 
+.quote-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Common form style */
 .form-popup {
   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-
-  width: 90%;
-  max-width: 450px;   /* keeps it clean on desktop */
-
+  position: absolute;
+  width: 350px;
+  max-width: 90vw;
+  background: rgb(1, 39, 69);
+  color:rgb(228, 209, 186);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  z-index: 99999;
+  z-index: 9999;
+}
 
-  max-height: 90vh;   /* prevents overflow on small screens */
-  overflow-y: auto;   /* scroll inside popup if content is long */
+/* Navbar position */
+.nav-wrapper .form-popup {
+  top: 110%;
+  right: 0;
+}
+
+/* Center position */
+.center-wrapper .form-popup {
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 600px) {

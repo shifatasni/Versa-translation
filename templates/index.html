@@ -3,49 +3,58 @@
 {% block title %}home{% endblock%}
 {% block content %}
 
-<section  class= "body" >
- <img src="/static/images/translate.jpg" alt="background image">
-
-  <div class="overlay"></div>
 
 
-</section>
 
+<section class="home" >
+   
+  
 
-<section class="home">
-    <h1 class="main-head" data-aos="fade-left">Professional Translation Services<br>
-       You Can Trust
+    <h1 class="main-head" data-aos="fade-left">Professional Translation <br>Services<br>
     </h1>
+    <h1 id="you-can"> You Can Trust</h1>
     <div class="line" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"></div>
     <h3 class="fast"  data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">Fast & Accurate Translation in Your Languages</h3>
 
-  <div class="home-buttons" data-aos="fade-left" data-aos-delay="300">
-    <button class="btn-quote"  onclick="openForm()">Get a Free Quote</button>
-
-      <div id="quoteForm" class="form-popup">
-         <form class="form-container" onsubmit="sendToWhatsApp(event)">
-          <h2>Get a Quote</h2>
-
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
-        <textarea id="message" placeholder="Your Message"></textarea>
-
-       <div class="btn-group">
-        <button type="submit" class="btn-submit">Submit</button>
-        <button type="button" class="btn-close2" onclick="closeForm()">Close</button>
-       </div>
-
-        </form>
-      </div>
-    
-    <button class="btn-Whatsapp" onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i> <span id="whats"> WhatsaApp Us</span></button>
-</div>
 
   </section>
 
 
 
 <section class="service">
+
+     <div class="home-buttons" data-aos="fade-up" data-aos-delay="100">
+
+  <!-- CENTER BUTTON -->
+  <button class="btn-quote" onclick="openForm('center')">
+    Get a Free Quote
+  </button>
+
+  <!-- FORM (ONLY ONE) -->
+  <div id="quoteForm" class="form-popup">
+    <form class="form-container" onsubmit="sendToWhatsApp(event)">
+      <h2>Get a Quote</h2>
+
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+
+      <div class="btn-group">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="button" class="btn-close2" onclick="closeForm()">Close</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- WHATSAPP BUTTON -->
+  <button class="btn-Whatsapp" onclick="openWhatsApp()">
+    <i class="bi bi-whatsapp"></i> 
+    <span id="whats"> WhatsApp Us</span>
+  </button>
+
+</div>
+
+
     <div class="heading-wrapper">
     <div class="line1"></div>
     <h1 class="our-serv">Our Services</h1>
@@ -258,6 +267,8 @@
         once: true
       });
     });
+
+    
   </script>
 
 {% endblock %}

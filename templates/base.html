@@ -37,7 +37,28 @@
         <li><a href="{% url 'services' %}">Services</a></li>
         <li><a href="{% url 'languages' %}">Languages</a></li>
         <li><a href="{% url 'contact' %}">Contact Us</a></li>
+   <div class="quote-wrapper nav-wrapper">
 
+  <button class="btn-quote-nav" onclick="toggleForm('navForm')">
+    Get a Quote
+  </button>
+
+  <div id="navForm" class="form-popup">
+    <form class="form-container" onsubmit="sendToWhatsApp(event)">
+      <h2>Get a Quote</h2>
+
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="language" placeholder="Language (Eg: English to Arabic)" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+
+      <div class="btn-group">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="button" class="btn-close2" onclick="toggleForm('navForm')">Close</button>
+      </div>
+    </form>
+  </div>
+
+</div>
         <!-- CONTACT SECTION -->
   <div class="nav-contact">
     <a href="mailto:tasnishifa@gmail.com" class="email">
