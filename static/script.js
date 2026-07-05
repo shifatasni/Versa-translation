@@ -1,6 +1,6 @@
 function openWhatsApp() {
   const phoneNumber = "918590292015"; // replace with your number
-  const message = "Hello, I want to know more!";
+  const message = "Hello, I want to know more about 'Translation'!";
   
   const url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   
