@@ -291,27 +291,27 @@
    background-position: center 30px ;  /* 🔥 focus image like screenshot */
   }
 
-  .main-head {
+   h1.main-head {
     font-size: 20px;
     margin-left: 0;
-    margin-top:20px;
+    
   }
 
   #you-can{
   
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
   margin-left:  0;
 }
 
   .line {
     width: 66px;   /* smaller line like image */
-    margin: 10px 0;
+    margin: 8px 0;
   }
 
   .fast {
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 10px;
+    margin-top: 8px;
     margin-bottom: 30px;
     margin: 10px 0;
   }
