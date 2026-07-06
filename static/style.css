@@ -201,7 +201,7 @@
   width: 100%;
   min-height: 600px;
 
-  background-image: url("/static/images/home.png");
+  background-image: url("/static/images/home2.jpeg");
   background-size: cover;              /* ✅ FULL WIDTH DESKTOP */
     /* adjust focus */
   background-repeat: no-repeat;
@@ -1548,20 +1548,20 @@ body {
   background-color: white;
 }
 
-
 #topBtn {
+  display: none; /* 🔥 VERY IMPORTANT */
   position: fixed;
-  bottom: 30px;
-  right: 0px;
+  bottom: 50px;
+  right: 20px;
   font-size: 20px;
-  background:none;
-  color:black;
+  background: none;
+  color: black;
   border: none;
   padding: 10px 14px;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 99999;
 }
-
 
 
 
