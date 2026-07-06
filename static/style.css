@@ -281,7 +281,7 @@
 @media (max-width: 768px) {
 
   .home {
-     min-height: 60vh; /* 🔥 better space */
+     min-height: 35vh; /* 🔥 better space */
     padding: 20px;
     justify-content: center;
     align-items: flex-start;   /* ✅ KEEP LEFT */
@@ -289,7 +289,7 @@
 
     
     background-size: cover;
-   background-position: 50% 20%;  /* 🔥 focus image like screenshot */
+   background-position: 100% 20%;  /* 🔥 focus image like screenshot */
   }
 
    h1.main-head {
